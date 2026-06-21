@@ -48,7 +48,7 @@ brew_install() {
         print_success "$FORMULA_READABLE_NAME"
     else
         execute \
-            "brew install $FORMULA $ARGUMENTS" \
+            "brew install --yes $FORMULA $ARGUMENTS" \
             "$FORMULA_READABLE_NAME"
     fi
 }
@@ -80,7 +80,7 @@ brew_update() {
 
 brew_upgrade() {
     execute \
-        "brew upgrade" \
+        "brew upgrade --yes" \
         "Homebrew (upgrade)"
 }
 
